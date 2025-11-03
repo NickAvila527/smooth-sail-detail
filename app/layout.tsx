@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import clsx from "clsx";
 import React from "react";
+import { Analytics } from "@vercel/analytics/next";
 import ClientShell from "./client-shell";
 
 const geistSans = Geist({
@@ -53,6 +54,7 @@ export default function RootLayout({
         )}
       >
         <ClientShell>{children}</ClientShell>
+        <Analytics />
       </body>
     </html>
   );
